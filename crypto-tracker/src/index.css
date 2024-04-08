@@ -7,9 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #11011E;
   overflow-x: hidden;
+  background: linear-gradient(135deg, #11011E 0%, #1D1630 50%, #29234A 100%);
+
+  background-size: cover;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
