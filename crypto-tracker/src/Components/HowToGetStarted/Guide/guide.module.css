@@ -1,0 +1,43 @@
+.guide{
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: #11011E95
+}
+
+.guidePhoto{
+  width: 3rem;
+  height: 3rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 2rem;
+  border-radius: 3rem;
+}
+
+.title {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 2.5rem;
+  color: #b6b6b6;
+}
+
+@media (max-width:500px) {
+  .guide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .guidePhoto{
+    margin: 0;
+  }
+}

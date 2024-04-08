@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.howToStart {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.title {
+  font-size: 36px;
+  color: white;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 2.5rem;
+  color: #b6b6b6;
+  margin-bottom: 3rem;
+}
+
+.howToStart button{
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #0FAE96;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+/* * * * * * * * * * * * */
+
+.startingGuide{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+@media (max-width: 850px) {
+  .howToStart {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+  }
+
+  .getStarted{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

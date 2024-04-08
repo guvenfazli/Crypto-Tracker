@@ -3,6 +3,7 @@ import classes from "./marketupdate.module.css"
 export default function MarketUpdate(){
   return (
     <div className={classes.marketSection}>
+      
       <div className={classes.marketTitle}>
         <p className={classes.title}>Market Update</p>
       </div>
@@ -36,14 +37,24 @@ export default function MarketUpdate(){
 
         <tbody>
           <tr>
-            <td>1</td>
-            <td className={classes.coinInfo}><div className={classes.coinBg}/> BITCOIN</td>
-            <td>50K</td>
-            <td>5%</td>
-            <td>GOOD</td>
-            <td>TRADE</td>
+            <td data-cell="NO">1</td>
+            <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg}/> BITCOIN</td>
+            <td data-cell="LAST PRICE">50K</td>
+            <td data-cell="CHANGE">5%</td>
+            <td data-cell="MARKET STATS">GOOD</td>
+            <td data-cell="TRADE">TRADE</td>
+          </tr>
+
+          <tr>
+            <td data-cell="NO">1</td>
+            <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg}/> BITCOIN</td>
+            <td data-cell="LAST PRICE">50K</td>
+            <td data-cell="CHANGE">5%</td>
+            <td data-cell="MARKET STATS">GOOD</td>
+            <td data-cell="TRADE">TRADE</td>
           </tr>
         </tbody>
+
       </table>
     </div>
   )
