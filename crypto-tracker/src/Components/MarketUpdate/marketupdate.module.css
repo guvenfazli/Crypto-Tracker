@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.marketSection{
+  border: 1px solid red;
+  padding: 0rem 3rem;
+
+}
+
+.marketTitle{
+  display: flex;
+}
+
+.title{
+  font-size: 36px;
+  color: white;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+
+.categoryTitle{
+  font-size: 18px;
+  color: #b6b6b6;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.tableNav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.tableNav button{
+  margin-right: 2rem;
+  padding: 0.7rem 1rem;
+  background:rgb(255, 255, 255, 0.3);
+  border: none;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 16px;
+  border-radius: 0.3rem;
+}
+
+.tableNav input{
+  width: 15%;
+  padding-left: 1rem;
+  background-color: #160C24;
+  border: none;
+  border-radius: 0.6rem;
+  color: white;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+}
+
+/* * * * * * * * * * * * * */
+
+table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  width: 100%;
+  border: 1px solid red;
+}
+
+table thead, table tbody td{
+  font-size: 16px;
+  font-weight: 500;
+  color: #b6b6b6;
+}
+
+table thead tr {
+  text-align: left;
+}
+
+table th, table td{
+  padding: 12px 15px;
+}
+
+tbody tr{
+  border-top: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.coinInfo{
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  
+}
+
+.coinBg{
+  border: 1px solid red;
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4rem;
+}
