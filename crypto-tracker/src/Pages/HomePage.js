@@ -5,12 +5,11 @@ import Features from "../Components/Features/Features"
 import NewCrypto from "../Components/NewCrypto/NewCrypto"
 import MarketUpdate from "../Components/MarketUpdate/MarketUpdate"
 import HowToGetStarted from "../Components/HowToGetStarted/HowToGetStarted"
-
+import Footer from "../Components/Footer/Footer"
 
 export default function HomePage() {
   return (
     <>
-    
       <Header />
       <Start />
       <MarketTrend />
@@ -18,7 +17,7 @@ export default function HomePage() {
       <NewCrypto />
       <MarketUpdate />
       <HowToGetStarted />
-
+      <Footer />
     </>
 
   )

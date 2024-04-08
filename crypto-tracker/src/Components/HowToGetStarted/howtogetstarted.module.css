@@ -2,7 +2,7 @@
 
 .howToStart {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-family: "Raleway", sans-serif;
   align-items: flex-start;
   padding: 3rem;
