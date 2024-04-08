@@ -8,7 +8,8 @@ export default function CoinCard(){
         <div className={classes.infoLeft}>
           <div className={classes.coinLogo} />
 
-          <p className={classes.coinName}>BTC <span>BITCOIN</span></p>
+          <p className={classes.coinName}>BTC </p>
+          <p className={classes.fullName}>BITCOIN</p>
         </div>
 
         <button><img src={arrow} alt="arrow" /></button>

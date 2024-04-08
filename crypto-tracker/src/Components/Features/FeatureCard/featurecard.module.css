@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.featureCard{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255, 0.07);
+}
+
+.featureCard button{
+  padding: 1rem 0.5rem;
+  background: none;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #0FAE96;
+  cursor: pointer;
+}
+
+.featurePhoto{
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.featureInfo{
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.title{
+  font-size: 20px;
+  margin-bottom: 2.5rem;
+}
+
+.description{
+  font-size: 16px;
+  color: #B6B6B6;
+  line-height: 2rem;
+}
+
+@media (max-width: 1050px) {
+  .featureCard{
+    width: 35%;
+
+  }
+}
+
+@media (max-width: 590px) {
+  .featureCard{
+    width: 50%;
+
+  }
+}
+
+@media (max-width: 400px) {
+  .featureCard{
+    width: 100%;
+
+  }
+}
