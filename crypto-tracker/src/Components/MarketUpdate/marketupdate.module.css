@@ -4,7 +4,7 @@
 .marketSection {
   padding: 0rem 3rem;
   overflow-x: hidden;
-
+  overflow-y: hidden;
 }
 
 .marketTitle {
@@ -133,7 +133,7 @@ table {
   border-collapse: collapse;
   margin: 25px 0;
   width: 100%;
-  overflow: scroll;
+  overflow: hidden;
   border: 1px solid rgb(255, 255, 255, 0.3);
 }
 
@@ -183,4 +183,24 @@ td button{
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4rem;
+}
+
+.tablePage{
+  display: flex;
+  justify-content: space-around;
+}
+
+.tablePage button{
+  border: none;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  background-color: #0FAE96;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.tablePage button[disabled]{
+  background-color: #8FDACB;
 }

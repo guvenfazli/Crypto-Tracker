@@ -4,30 +4,26 @@
 .details{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  border: 1px solid red;
   font-size: 20px;
   color: white;
+  border: 1px solid rgb(255, 255, 255, 0.3);
 }
 
-.title{
+.detailNav{
+  display: flex;
+  padding: 1rem;
+}
+
+.detailNav button{
+  color: white;
+  background-color: #0FAE96;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
   font-family: "Raleway", sans-serif;
-}
-
-.coinInfo{
-  display: flex;
-  justify-content: space-around;
-  border: 1px solid red;
-  width: 100%;
-  text-align: center;
-}
-
-.coinInfo div{
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .coinIcon{
@@ -37,4 +33,66 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.title{
+  font-family: "Raleway", sans-serif;
+}
+
+.coinInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 5rem;
+  border-top: 1px solid rgb(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+  padding: 1rem 0rem;
+}
+
+.coinStats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tableTitle{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 750px) {
+  .coinStats {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 660px) {
+  .detailNav{
+    padding: 1rem 0rem;
+    padding-left: 1rem;
+    align-items: flex-start;
+  }
+
+  .tableTitle{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .coinInfo{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .coinInfo p{
+    line-height: 2rem;
+  }
+
+  .tableTitle {
+    font-size: 16px;
+  }
 }
