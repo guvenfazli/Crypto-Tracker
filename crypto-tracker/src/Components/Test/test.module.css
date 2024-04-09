@@ -1,0 +1,28 @@
+.testDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+}
+
+.imageHolder {
+  border: 1px solid blue;
+  display: flex;
+  overflow: hidden;
+  transition: 1.5s;
+}
+
+.card{
+  border: 1px solid red;
+  width: 50%;
+  flex-shrink: 0;
+  transition: 1s;
+  color: white;
+}
+
+.train {
+  border: 1px solid pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

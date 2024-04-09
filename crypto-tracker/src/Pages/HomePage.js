@@ -6,7 +6,7 @@ import NewCrypto from "../Components/NewCrypto/NewCrypto"
 import MarketUpdate from "../Components/MarketUpdate/MarketUpdate"
 import HowToGetStarted from "../Components/HowToGetStarted/HowToGetStarted"
 import Footer from "../Components/Footer/Footer"
-
+import Test from "../Components/Test/Test"
 export default function HomePage() {
   return (
     <>
@@ -18,6 +18,7 @@ export default function HomePage() {
       <MarketUpdate />
       <HowToGetStarted />
       <Footer />
+      <Test />
     </>
 
   )
