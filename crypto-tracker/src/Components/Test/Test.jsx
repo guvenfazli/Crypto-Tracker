@@ -34,8 +34,8 @@ export default function Test() {
   function testFunc(){
     setTestState((prev) => {
       let newSlice = {...prev}
-      newSlice.start += 2
-      newSlice.end += 2
+      newSlice.start += 4
+      newSlice.end += 4
       return newSlice
     })
   }
@@ -43,8 +43,8 @@ export default function Test() {
   function testMFunc(){
     setTestState((prev) => {
       let newSlice = {...prev}
-      newSlice.start -= 2
-      newSlice.end -= 2
+      newSlice.start -= 4
+      newSlice.end -= 4
       return newSlice
     })
   }
