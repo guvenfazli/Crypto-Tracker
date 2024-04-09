@@ -163,6 +163,17 @@ tbody tr {
 
 }
 
+td button{
+  background-color: #0FAE96;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
 .coinBg {
   display: flex;
   width: 2.5rem;
@@ -172,5 +183,4 @@ tbody tr {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4rem;
-  border: 1px solid red;
 }

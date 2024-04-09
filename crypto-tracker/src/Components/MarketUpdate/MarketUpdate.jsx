@@ -1,9 +1,15 @@
+import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 import classes from "./marketupdate.module.css"
 
-export default function MarketUpdate(){
+export default function MarketUpdate({ data }) {
+
+  const limitedData = data.slice(0, 10)
+  console.log(limitedData)
+
+
   return (
     <div className={classes.marketSection}>
-      
+
       <div className={classes.marketTitle}>
         <p className={classes.title}>Market Update</p>
       </div>
@@ -19,7 +25,7 @@ export default function MarketUpdate(){
           <button>Activity</button>
         </div>
 
-        <input type="text" placeholder="Search Coins..."/>
+        <input type="text" placeholder="Search Coins..." />
       </nav>
 
       <table>
@@ -36,26 +42,22 @@ export default function MarketUpdate(){
         </thead>
 
         <tbody>
-          <tr>
-            <td data-cell="NO">1</td>
-            <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg}/> BITCOIN</td>
-            <td data-cell="LAST PRICE">50K</td>
-            <td data-cell="CHANGE">5%</td>
-            <td data-cell="MARKET STATS">GOOD</td>
-            <td data-cell="TRADE">TRADE</td>
-          </tr>
 
-          <tr>
-            <td data-cell="NO">1</td>
-            <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg}/> BITCOIN</td>
-            <td data-cell="LAST PRICE">50K</td>
-            <td data-cell="CHANGE">5%</td>
-            <td data-cell="MARKET STATS">GOOD</td>
-            <td data-cell="TRADE">TRADE</td>
-          </tr>
+          {limitedData.map((coin, index) =>
+            <tr>
+              <td data-cell="NO">{index + 1}</td>
+              <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg} style={{ backgroundImage: `url(${coin.image})` }} /> {coin.name}</td>
+              <td data-cell="PRICE">{coin.current_price} $</td>
+              <td data-cell="CHANGE">{coin.price_change_percentage_24h} %</td>
+              <td data-cell="MARKET STATS">Here will be chart</td>
+              <td data-cell="TRADE"><button>See Details</button></td>
+            </tr>)}
+
         </tbody>
 
       </table>
+
+
     </div>
   )
 }

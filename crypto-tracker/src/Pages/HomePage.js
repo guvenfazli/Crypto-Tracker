@@ -9,7 +9,18 @@ import HowToGetStarted from "../Components/HowToGetStarted/HowToGetStarted"
 import Footer from "../Components/Footer/Footer"
 import Test from "../Components/Test/Test"
 
+/* H O O K S */
+import { useLoaderData } from "react-router-dom"
+
+/* U T I L S */
+import { fetchCoins } from "../Utils/fetchCoins"
+
 export default function HomePage() {
+
+  const data = useLoaderData();
+  
+  console.log(data)
+
   return (
     <>
       <Header />
@@ -17,11 +28,16 @@ export default function HomePage() {
       <MarketTrend />
       <Features />
       <NewCrypto />
-      <MarketUpdate />
+      <MarketUpdate data={data}/>
       <HowToGetStarted />
       <Footer />
       <Test />
     </>
 
   )
+}
+
+export async function loader(){
+  const data = await fetchCoins();
+  return data;
 }
