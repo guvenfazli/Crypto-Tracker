@@ -3,10 +3,6 @@ import { hamb } from "./headerIcons"
 
 
 export default function Header() {
-
-
-
-
   return (
     <header>
       <div className={classes.headerLeft}>

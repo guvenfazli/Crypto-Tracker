@@ -32,9 +32,14 @@ header{
   border: none;
   font-family: "Raleway", sans-serif;
   cursor: pointer;
+  transition: 0.5s;
   margin: 0rem 1rem;
-
 }
+
+.headerMid button:hover{
+  color: #0FAE96;
+}
+
 
 .headerRight {
   display: flex;
