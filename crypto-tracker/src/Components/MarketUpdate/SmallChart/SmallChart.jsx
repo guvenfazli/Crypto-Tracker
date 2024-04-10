@@ -79,13 +79,14 @@ export default function SmallChart({ data, detail }) {
             <p>All Time Low: <span style={{ color: "#B6B6B6" }}>{data.atl} $</span></p>
             <p>Highest in 24h: <span style={{ color: "#B6B6B6" }}>{data.high_24h} $</span></p>
             <p>Lowest in 24h: <span style={{ color: "#B6B6B6" }}>{data.low_24h} $</span></p>
+            <p>{data.price_change_percentage_24h}</p>
           </div>
 
         </div>
 
       </div>
 
-      <div className={classes.tableTitle} >Price Change in 24h in Graphics</div>
+      <div className={classes.tableTitle} >Price Change in Daily Graphics</div>
 
       <div className={classes.chartController}>
         <button disabled={checkButton[1]} onClick={() => controlChartDate(1)}>1 D</button>
@@ -98,19 +99,20 @@ export default function SmallChart({ data, detail }) {
 
       <ResponsiveContainer width="100%" height={500}>
         <AreaChart data={coinData} margin={{ right: 25 }} >
-          <Area fillOpacity={1} fill="url(#value)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
+          <Area fillOpacity={1} fill="url(#colorValue)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
           <defs>
-            <linearGradient id="value" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor={data.price_change_24h > 0 ? '#66B346' : '#D32F2F'} stopOpacity={0.8} />
-              <stop offset="95%" stopColor={data.price_change_24h > 0 ? '#46B39A' : '#D4682F'} stopOpacity={0} />
+            <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={data.price_change_percentage_24h > 0 ? '#66BB6A' : '#EF5350'} stopOpacity={0.8} />
+              <stop offset="95%" stopColor={data.price_change_percentage_24h > 0 ? '#2E7D32 ' : '#C62828'} stopOpacity={0} />
             </linearGradient>
           </defs>
           <XAxis tick={true} values='value' style={{ fontSize: "0.7rem" }} angle={-45} />
           <Tooltip itemStyle={{ color: "black" }} contentStyle={{ backgroundColor: "rgb(255,255,255,0.3)", border: "none", borderRadius: "1rem" }} labelStyle={{ display: 'none' }} />
           <YAxis style={{ fontSize: "0.7rem", }} domain={["dataMin", "dataMax"]} values='value' />
-          <CartesianGrid stroke='#555773' strokeDasharray="5 5"/>
+          <CartesianGrid stroke='#555773' strokeDasharray="5 5" />
         </AreaChart>
       </ResponsiveContainer>
+
     </div>
   )
 }

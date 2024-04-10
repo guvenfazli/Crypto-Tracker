@@ -8,8 +8,8 @@ import { fetchCoinData } from '../../../Utils/fetchCoins';
 
 export default function CoinCard({ data }) {
 
-  const [coinData, setCoinData] = useState();
 
+  const [coinData, setCoinData] = useState();
   useEffect(() => {
     async function coinData() {
       const priceData = await fetchCoinData(data.id, 1)
@@ -45,16 +45,16 @@ export default function CoinCard({ data }) {
         </div>
 
         <div className={classes.statRight}>
-            <AreaChart data={coinData} width={200} height={50}>
-              <Area fillOpacity={1} fill="url(#value)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
-              <defs>
-                <linearGradient id="value" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor={data.price_change_24h > 0 ? '#66B346' : '#D32F2F'} stopOpacity={0.8} />
-                  <stop offset="95%" stopColor={data.price_change_24h > 0 ? '#46B39A' : '#D4682F'} stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <YAxis width={0} style={{ fontSize: "0.7rem"}} domain={["dataMin", "dataMax"]} values='value' tick={false} axisLine={false} />
-            </AreaChart>
+          <AreaChart data={coinData} width={200} height={50}>
+            <Area fillOpacity={1} fill="url(#Colorvalue)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_percentage_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
+            <defs>
+              <linearGradient id="Colorvalue" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor={data.price_change_percentage_24h > 0 ? '#66BB6A' : '#EF5350'} stopOpacity={0.8} />
+                <stop offset="95%" stopColor={data.price_change_percentage_24h > 0 ? '#2E7D32 ' : '#C62828'} stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <YAxis width={0} style={{ fontSize: "0.7rem" }} domain={["dataMin", "dataMax"]} values='value' tick={false} axisLine={false} />
+          </AreaChart>
         </div>
       </div>
     </div>
