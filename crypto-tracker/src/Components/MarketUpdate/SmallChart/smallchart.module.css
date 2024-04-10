@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-.details{
+.details {
   display: flex;
   flex-direction: column;
   font-size: 20px;
@@ -9,12 +9,12 @@
   border: 1px solid rgb(255, 255, 255, 0.3);
 }
 
-.detailNav{
+.detailNav {
   display: flex;
   padding: 1rem;
 }
 
-.detailNav button{
+.detailNav button {
   color: white;
   background-color: #0FAE96;
   padding: 0.4rem;
@@ -26,7 +26,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-.coinIcon{
+.coinIcon {
   width: 5rem;
   height: 5rem;
   border-radius: 2rem;
@@ -35,11 +35,11 @@
   background-repeat: no-repeat;
 }
 
-.title{
+.title {
   font-family: "Raleway", sans-serif;
 }
 
-.coinInfo{
+.coinInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,10 +57,31 @@
   width: 100%;
 }
 
-.tableTitle{
+.tableTitle {
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+}
+
+.chartController {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.chartController button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #0FAE96;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chartController button[disabled] {
+  background-color: #8FDACB;
+
 }
 
 @media (max-width: 750px) {
@@ -70,25 +91,25 @@
 }
 
 @media (max-width: 660px) {
-  .detailNav{
+  .detailNav {
     padding: 1rem 0rem;
     padding-left: 1rem;
     align-items: flex-start;
   }
 
-  .tableTitle{
+  .tableTitle {
     flex-direction: column;
     align-items: center;
   }
 }
 
 @media (max-width: 550px) {
-  .coinInfo{
+  .coinInfo {
     font-size: 16px;
     text-align: center;
   }
 
-  .coinInfo p{
+  .coinInfo p {
     line-height: 2rem;
   }
 

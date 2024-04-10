@@ -80,7 +80,7 @@ export default function MarketUpdate({ data }) {
                     <td data-cell="NO">{index + 1}</td>
                     <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg} style={{ backgroundImage: `url(${coin.image})` }} /> {coin.name}</td>
                     <td data-cell="PRICE">{coin.current_price.toFixed(1)} $</td>
-                    <td data-cell="CHANGE">{coin.price_change_percentage_24h.toFixed(2)} %</td>
+                    <td style={{color: coin.price_change_percentage_24h < 0 ? "#D32F2F" : '#4CAF50'}} data-cell="CHANGE">{coin.price_change_percentage_24h.toFixed(2)} %</td>
                     <td data-cell="TRADE"><button onClick={() => renderDetails(coin)}>See Details</button></td>
                   </tr>)}
 
