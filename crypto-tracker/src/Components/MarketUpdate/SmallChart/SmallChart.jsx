@@ -1,4 +1,4 @@
-import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, domain, Label, Tooltip } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, domain, Tooltip, AreaChart, Area } from 'recharts';
 import classes from "./smallchart.module.css"
 /* U T I L S */
 import { fetchCoinData } from '../../../Utils/fetchCoins';
@@ -31,7 +31,7 @@ export default function SmallChart({ data, detail }) {
     const priceData = await fetchCoinData(data.id, dayNumber)
     const priceHistory = priceData.prices
     setCheckButton((prev) => {
-      let checking = {[dayNumber]: prev.dayNumber === true ? false : true}
+      let checking = { [dayNumber]: prev.dayNumber === true ? false : true }
       return checking
     })
 
@@ -97,13 +97,19 @@ export default function SmallChart({ data, detail }) {
 
 
       <ResponsiveContainer width="100%" height={500}>
-        <LineChart data={coinData} margin={{ right: 25 }} >
-          <Line strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
-          <XAxis tick={true} values='value' style={{ fontSize: "0.7rem"}} angle={-45}/>
+        <AreaChart data={coinData} margin={{ right: 25 }} >
+          <Area fillOpacity={1} fill="url(#value)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
+          <defs>
+            <linearGradient id="value" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={data.price_change_24h > 0 ? '#66B346' : '#D32F2F'} stopOpacity={0.8} />
+              <stop offset="95%" stopColor={data.price_change_24h > 0 ? '#46B39A' : '#D4682F'} stopOpacity={0} />
+            </linearGradient>
+          </defs>
+          <XAxis tick={true} values='value' style={{ fontSize: "0.7rem" }} angle={-45} />
           <Tooltip itemStyle={{ color: "black" }} contentStyle={{ backgroundColor: "rgb(255,255,255,0.3)", border: "none", borderRadius: "1rem" }} labelStyle={{ display: 'none' }} />
           <YAxis style={{ fontSize: "0.7rem", }} domain={["dataMin", "dataMax"]} values='value' />
           <CartesianGrid stroke='#555773' />
-        </LineChart>
+        </AreaChart>
       </ResponsiveContainer>
     </div>
   )

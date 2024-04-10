@@ -20,6 +20,3 @@ export async function fetchCoinData(coinId, days){
   const resData = await response.json();
   return resData;
 }
-
-
-
