@@ -91,7 +91,7 @@ export default function MarketUpdate({ data }) {
           </>
         }
       </div>
-      <div className={classes.navigators}>
+      <div style={{display: details && "none"}} className={classes.navigators}>
         <button disabled={controlTable.start <= 0} onClick={() => navigateTable("-")}>Previous</button>
         <button disabled={controlTable.end >= data.length} onClick={() => navigateTable("+")}>Next</button>
       </div>
