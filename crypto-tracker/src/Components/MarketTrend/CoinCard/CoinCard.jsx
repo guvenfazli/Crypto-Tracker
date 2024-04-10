@@ -32,7 +32,6 @@ export default function CoinCard({ data }) {
           <div className={classes.coinLogo} style={{ backgroundImage: `url(${data.image})` }} />
 
           <p className={classes.coinName}>{data.name} </p>
-          <p className={classes.fullName}>{data.id}</p>
         </div>
 
         <button><img src={arrow} alt="arrow" /></button>
@@ -46,7 +45,7 @@ export default function CoinCard({ data }) {
         </div>
 
         <div className={classes.statRight}>
-            <AreaChart data={coinData} margin={{ right: 25 }} width={200} height={100}>
+            <AreaChart data={coinData} width={200} height={50}>
               <Area fillOpacity={1} fill="url(#value)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
               <defs>
                 <linearGradient id="value" x1="0" y1="0" x2="0" y2="1">
@@ -54,7 +53,7 @@ export default function CoinCard({ data }) {
                   <stop offset="95%" stopColor={data.price_change_24h > 0 ? '#46B39A' : '#D4682F'} stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <YAxis style={{ fontSize: "0.7rem"}} domain={["dataMin", "dataMax"]} values='value' tick={false} axisLine={false} />
+              <YAxis width={0} style={{ fontSize: "0.7rem"}} domain={["dataMin", "dataMax"]} values='value' tick={false} axisLine={false} />
             </AreaChart>
         </div>
       </div>

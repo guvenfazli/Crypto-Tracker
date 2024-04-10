@@ -91,13 +91,20 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 1rem 0rem;
+  row-gap: 2rem;
 }
 
 .statLeft{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto;
+}
+
+.statRight{
+  margin: auto;
 }
 
 .price{
