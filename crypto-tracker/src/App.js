@@ -4,6 +4,9 @@ import HomePage from "./Pages/HomePage";
 /* L O A D E R S */
 import { loader } from "./Pages/HomePage";
 
+/* C O N T E X T */
+import { SavedJobContext } from "./Store/context";
+
 const router = createBrowserRouter([
   { path: '/', element: <HomePage />, loader: loader }
 ])
@@ -12,7 +15,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router}></RouterProvider>
+    <SavedJobContext>
+      <RouterProvider router={router}></RouterProvider>
+    </SavedJobContext>
   );
 }
 

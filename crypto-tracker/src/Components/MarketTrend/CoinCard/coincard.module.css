@@ -66,6 +66,7 @@
   cursor: pointer;
 }
 
+
 @media (max-width: 1050px) {
   .coinCard{
     width: 33%;
