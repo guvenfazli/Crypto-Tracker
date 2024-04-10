@@ -2,7 +2,7 @@ import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, doma
 import classes from "./smallchart.module.css"
 /* U T I L S */
 import { fetchCoinData } from '../../../Utils/fetchCoins';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 import { backArrow } from './smallcharticon';
 
@@ -11,11 +11,6 @@ export default function SmallChart({ data, detail }) {
   const [coinData, setCoinData] = useState();
   const [checkButton, setCheckButton] = useState({
     1: true,
-    3: false,
-    7: false,
-    15: false,
-    30: false
-
   })
 
   useEffect(() => {
@@ -104,7 +99,7 @@ export default function SmallChart({ data, detail }) {
       <ResponsiveContainer width="100%" height={500}>
         <LineChart data={coinData} margin={{ right: 25 }} >
           <Line strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
-          <XAxis tick={true} values='value' style={{ fontSize: "0.7rem", }} />
+          <XAxis tick={true} values='value' style={{ fontSize: "0.7rem"}} angle={-45}/>
           <Tooltip itemStyle={{ color: "black" }} contentStyle={{ backgroundColor: "rgb(255,255,255,0.3)", border: "none", borderRadius: "1rem" }} labelStyle={{ display: 'none' }} />
           <YAxis style={{ fontSize: "0.7rem", }} domain={["dataMin", "dataMax"]} values='value' />
           <CartesianGrid stroke='#555773' />

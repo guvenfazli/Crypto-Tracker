@@ -27,9 +27,11 @@
 }
 
 .coinLogo{
-  border: 1px solid red;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   height: 3.15rem;
-  width: 3rem;
+  width: 3.15rem;
   border-radius: 3rem;
   margin-right: 1rem;
 }

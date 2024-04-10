@@ -1,7 +1,10 @@
 import classes from "./markettrend.module.css"
 import CoinCard from "./CoinCard/CoinCard"
 
-export default function MarketTrend(){
+export default function MarketTrend({ data }) {
+
+  const filteredData = data.slice(0, 4)
+
   return (
     <div className={classes.trend}>
       <div className={classes.title}>
@@ -9,10 +12,7 @@ export default function MarketTrend(){
       </div>
 
       <div className={classes.coinShowcase}>
-        <CoinCard />
-        <CoinCard />
-        <CoinCard />
-        <CoinCard />
+        {filteredData.map((coin) => <CoinCard key={coin.id} data={coin} />)}
       </div>
     </div>
   )

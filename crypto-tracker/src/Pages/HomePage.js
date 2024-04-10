@@ -22,7 +22,7 @@ export default function HomePage() {
     <>
       <Header />
       <Start />
-      <MarketTrend />
+      <MarketTrend data={data}/>
       <Features />
       <NewCrypto />
       <MarketUpdate data={data}/>

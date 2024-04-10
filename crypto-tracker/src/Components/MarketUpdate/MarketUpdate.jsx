@@ -1,4 +1,3 @@
-import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 import classes from "./marketupdate.module.css"
 
 import SmallChart from './SmallChart/SmallChart';
