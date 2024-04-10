@@ -7,7 +7,6 @@ import MarketUpdate from "../Components/MarketUpdate/MarketUpdate"
 import HowToGetStarted from "../Components/HowToGetStarted/HowToGetStarted"
 /* API ILE BURAYA NEWS GELECEK */
 import Footer from "../Components/Footer/Footer"
-import Test from "../Components/Test/Test"
 
 /* H O O K S */
 import { useLoaderData } from "react-router-dom"
@@ -19,8 +18,6 @@ export default function HomePage() {
 
   const data = useLoaderData();
   
-  console.log(data)
-
   return (
     <>
       <Header />
@@ -31,7 +28,6 @@ export default function HomePage() {
       <MarketUpdate data={data}/>
       <HowToGetStarted />
       <Footer />
-      <Test />
     </>
 
   )

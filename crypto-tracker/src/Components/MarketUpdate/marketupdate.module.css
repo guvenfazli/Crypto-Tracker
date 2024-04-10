@@ -66,7 +66,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
   }
 
   .marketTitle {
@@ -99,6 +98,8 @@
     width: 100%;
     height: 3rem;
   }
+
+
 }
 
 
@@ -110,14 +111,21 @@
   table {
     align-items: center;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   td {
     display: block;
+
   }
 
-  tr:first-child{
+
+  .coinInfo {
+    align-items: flex-start;
+  }
+
+
+  tr:first-child {
     border-top: 0px;
   }
 
@@ -155,15 +163,16 @@ table td {
 
 tbody tr {
   border-top: 1px solid rgb(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .coinInfo {
   display: flex;
   align-items: center;
-
+  justify-content: flex-start;
 }
 
-td button{
+td button {
   background-color: #0FAE96;
   color: white;
   font-family: "Raleway", sans-serif;
@@ -172,25 +181,34 @@ td button{
   border-radius: 0.3rem;
   white-space: nowrap;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+td button:hover {
+  box-shadow: 0px 0px 50px 1px #0FAE96;
 }
 
 .coinBg {
-  display: flex;
   width: 2.5rem;
   height: 2.5rem;
   margin-right: 1rem;
+  border-radius: 4rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 4rem;
+  
 }
 
-.tablePage{
+tbody tr:hover {
+  background-color: #160C24;
+}
+
+.navigators {
   display: flex;
   justify-content: space-around;
 }
 
-.tablePage button{
+.navigators button {
   border: none;
   font-family: "Raleway", sans-serif;
   color: white;
@@ -201,6 +219,7 @@ td button{
   cursor: pointer;
 }
 
-.tablePage button[disabled]{
+.navigators button[disabled] {
   background-color: #8FDACB;
 }
+

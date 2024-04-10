@@ -24,7 +24,6 @@ export default function SmallChart({ data, detail }) {
     coinData();
   }, [])
 
-  console.log(coinData)
 
   function goBack() {
     detail(undefined)
@@ -67,11 +66,11 @@ export default function SmallChart({ data, detail }) {
 
 
       <ResponsiveContainer width="100%" height={500}>
-        <LineChart data={coinData} margin={{right: 25}}>
+        <LineChart data={coinData} margin={{right: 25}} >
           <Line strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
           <XAxis tick={false} />
           <Tooltip itemStyle={{color: "black"}} contentStyle={{backgroundColor: "rgb(255,255,255,0.3)", border: "none", borderRadius: "1rem"}} labelStyle={{display:'none'}}/>
-          <YAxis style={{ fontSize: "0.7rem", padding: "0" }} domain={['dataMin', 'dataMax']} values='value' />
+          <YAxis style={{ fontSize: "0.7rem", padding: "0" }} domain={['dataMin', "dataMax" ]} values='value' />
           <CartesianGrid stroke='#555773' />
         </LineChart>
       </ResponsiveContainer>
