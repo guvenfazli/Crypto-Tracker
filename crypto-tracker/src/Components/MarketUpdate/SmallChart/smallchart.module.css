@@ -101,6 +101,10 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .chartController button {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 550px) {
@@ -115,5 +119,16 @@
 
   .tableTitle {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 410px) {
+  .chartController {
+    flex-direction: column;
+    margin-bottom: 2rem
+  }
+
+  .chartController button{
+    border-radius: 0.2rem;
   }
 }

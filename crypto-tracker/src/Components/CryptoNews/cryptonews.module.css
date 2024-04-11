@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.news {
+  padding: 5rem 3rem;
+  border-top:1px solid #B6B6B630 ;
+
+}
+
+.newShowcase {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: 0.5s;
+  column-gap: 3rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.newsNav {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Raleway", sans-serif;
+
+}
+
+.newsNav button{
+  border: none;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  background-color: #0FAE96;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.newsNav button[disabled] {
+  background-color: #8FDACB;
+}
+

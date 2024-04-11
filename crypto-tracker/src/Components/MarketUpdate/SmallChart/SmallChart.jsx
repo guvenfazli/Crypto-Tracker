@@ -115,7 +115,7 @@ export default function SmallChart({ data, detail }) {
             </defs>
             <XAxis tick={true} values='value' style={{ fontSize: "0.7rem" }} angle={-45} />
             <Tooltip itemStyle={{ color: "black" }} contentStyle={{ backgroundColor: "rgb(255,255,255,0.3)", border: "none", borderRadius: "1rem" }} labelStyle={{ display: 'none' }} />
-            <YAxis style={{ fontSize: "0.7rem", }} domain={["dataMin", "dataMax"]} values='value' />
+            <YAxis style={{ fontSize: "0.7rem", }} angle={-25} domain={["dataMin", "dataMax"]} values='value' />
             <CartesianGrid stroke='#555773' strokeDasharray="5 5" />
           </AreaChart>
         </ResponsiveContainer>

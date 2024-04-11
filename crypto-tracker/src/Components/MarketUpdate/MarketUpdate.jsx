@@ -1,6 +1,6 @@
 import classes from "./marketupdate.module.css"
-
 import SmallChart from './SmallChart/SmallChart';
+
 import { useState, useRef } from 'react';
 
 export default function MarketUpdate({ data }) {
@@ -23,9 +23,6 @@ export default function MarketUpdate({ data }) {
     }
   }
 
-  const limitedData = data.slice(controlTable.start, controlTable.end)
-
-  console.log(limitedData)
   function renderDetails(coin) {
     setDetails(coin)
   }
@@ -47,6 +44,9 @@ export default function MarketUpdate({ data }) {
       })
     }
   }
+
+  const limitedData = data.slice(controlTable.start, controlTable.end)
+
 
 
   return (

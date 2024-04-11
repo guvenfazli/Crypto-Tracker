@@ -5,7 +5,7 @@ import Features from "../Components/Features/Features"
 import NewCrypto from "../Components/NewCrypto/NewCrypto"
 import MarketUpdate from "../Components/MarketUpdate/MarketUpdate"
 import HowToGetStarted from "../Components/HowToGetStarted/HowToGetStarted"
-/* API ILE BURAYA NEWS GELECEK */
+import CryptoNews from "../Components/CryptoNews/CryptoNews"
 import Footer from "../Components/Footer/Footer"
 
 /* H O O K S */
@@ -13,27 +13,34 @@ import { useLoaderData } from "react-router-dom"
 
 /* U T I L S */
 import { fetchCoins } from "../Utils/fetchCoins"
+import { fetchCryptoNews } from "../Utils/fetchCryptoNews"
 
 export default function HomePage() {
 
-  const data = useLoaderData();
-  
+  const { data } = useLoaderData();
+  const { news } = useLoaderData();
+
   return (
     <>
       <Header />
       <Start />
-      <MarketTrend data={data}/>
+      <MarketTrend data={data} />
       <Features />
       <NewCrypto />
-      <MarketUpdate data={data}/>
+      <MarketUpdate data={data} />
       <HowToGetStarted />
+      <CryptoNews news={news} />
       <Footer />
     </>
 
   )
 }
 
-export async function loader(){
-  const data = await fetchCoins();
-  return data;
+export async function loader() {
+  const allData = {
+    data: await fetchCoins(),
+    news: await fetchCryptoNews()
+  }
+  
+  return allData;
 }
