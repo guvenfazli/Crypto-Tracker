@@ -20,7 +20,7 @@ export default function CryptoNews({ news }) {
   return (
     <div className={classes.news}>
       <div className={classes.newShowcase}>
-        {news.items.map((data) => <NewCard key={data.timestamp} newData={data} page={page} />)}
+        {news.items.map((data) => <NewCard key={data.title} newData={data} page={page} />)}
       </div>
       <div className={classes.newsNav}>
         <button disabled={page === 0} onClick={() => controlPage("-")}>Previous</button>
