@@ -10,7 +10,17 @@ export default function CryptoNews({ news }) {
 
   function controlPage(control) {
     if (control === "+") {
-      setPage((prev) => prev += 1)
+
+      setPage((prev) => {
+        if (prev < news.items.length) {
+          prev += 1
+          return prev
+        } else if (news.items.length - 2) {
+          prev = 0
+          return prev
+        }
+      }
+      )
     } else {
       setPage((prev) => prev -= 1)
     }
@@ -24,7 +34,7 @@ export default function CryptoNews({ news }) {
       </div>
       <div className={classes.newsNav}>
         <button disabled={page === 0} onClick={() => controlPage("-")}>Previous</button>
-        <button disabled={page >= news.items.length - 1 } onClick={() => controlPage("+")}>Next</button>
+        <button onClick={() => controlPage("+")}>Next</button>
       </div>
     </div>
   )
