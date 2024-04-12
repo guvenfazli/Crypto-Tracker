@@ -86,7 +86,6 @@ export default function SmallChart({ data, detail }) {
             <p>All Time Low: <span style={{ color: "#B6B6B6" }}>{data.atl} $</span></p>
             <p>Highest in 24h: <span style={{ color: "#B6B6B6" }}>{data.high_24h} $</span></p>
             <p>Lowest in 24h: <span style={{ color: "#B6B6B6" }}>{data.low_24h} $</span></p>
-            <p>{data.price_change_percentage_24h}</p>
           </div>
 
         </div>
