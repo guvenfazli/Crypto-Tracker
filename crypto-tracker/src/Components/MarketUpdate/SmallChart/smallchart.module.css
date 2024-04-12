@@ -125,10 +125,12 @@
 @media (max-width: 410px) {
   .chartController {
     flex-direction: column;
+    align-items: center;
     margin-bottom: 2rem
   }
 
   .chartController button{
     border-radius: 0.2rem;
+    width: 80%;
   }
 }

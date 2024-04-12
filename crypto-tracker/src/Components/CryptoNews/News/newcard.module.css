@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-.newCard{
+.newCard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +13,13 @@
   font-family: "Raleway", sans-serif;
   transition: 0.5s;
   border-radius: 1rem;
-  background-color: #11011E95;
   color: white;
+}
+
+.cardInfo {
+  background-color: #11011E95;
+  min-height: 450px;
+  padding: 1rem;
 }
 
 .newBg {
@@ -34,14 +39,14 @@
 }
 
 @media (max-width: 950px) {
-  .newCard{
+  .cardInfo {
     min-height: 250px;
   }
 
   .title {
     font-size: 1rem;
   }
-  
+
   .description {
     font-size: 0.8rem;
   }
@@ -55,15 +60,15 @@
 
 @media (max-width: 650px) {
 
-  .newCard{
+  .cardInfo {
     min-height: 250px;
   }
 
-  
+
   .title {
     font-size: 0.8rem;
   }
-  
+
   .description {
     font-size: 0.6rem;
   }
@@ -76,15 +81,15 @@
 
 @media (max-width: 500px) {
 
-  .newCard{
+  .cardInfo {
     min-height: 250px;
   }
 
-  
+
   .title {
     font-size: 0.7rem;
   }
-  
+
   .description {
     display: none;
   }
@@ -95,3 +100,14 @@
   }
 }
 
+
+@media (max-width: 450px) {
+  .newCard {
+    width: 100%;
+  }
+
+  .cardInfo {
+    min-height: 250px;
+    padding: 1;
+  }
+}

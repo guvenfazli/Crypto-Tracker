@@ -16,6 +16,8 @@ export default function CryptoNews({ news }) {
     }
   }
 
+  console.log(page)
+
   return (
     <div className={classes.news}>
       <div className={classes.newShowcase}>
@@ -23,7 +25,7 @@ export default function CryptoNews({ news }) {
       </div>
       <div className={classes.newsNav}>
         <button disabled={page === 0} onClick={() => controlPage("-")}>Previous</button>
-        <button disabled={page >= news.items.length} onClick={() => controlPage("+")}>Next</button>
+        <button disabled={page >= news.items.length - 1 } onClick={() => controlPage("+")}>Next</button>
       </div>
     </div>
   )

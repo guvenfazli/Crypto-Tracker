@@ -45,9 +45,9 @@ export default function CoinCard({ data }) {
 
         <div className={classes.statRight}>
           <AreaChart data={coinData} width={200} height={50}>
-            <Area fillOpacity={1} fill="url(#colorValue)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_percentage_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
+            <Area fillOpacity={1} fill="url(#trendCard)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_percentage_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
             <defs>
-              <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="trendCard" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor={data.price_change_percentage_24h > 0 ? '#66BB6A' : '#EF5350'} stopOpacity={0.8} />
                 <stop offset="95%" stopColor={data.price_change_percentage_24h > 0 ? '#2E7D32 ' : '#C62828'} stopOpacity={0} />
               </linearGradient>
