@@ -16,7 +16,6 @@ export default function CryptoNews({ news }) {
     }
   }
 
-  console.log(page)
 
   return (
     <div className={classes.news}>

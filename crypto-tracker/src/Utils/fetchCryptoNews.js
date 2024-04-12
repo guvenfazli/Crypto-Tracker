@@ -3,7 +3,7 @@ export async function fetchCryptoNews() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '37574890f8mshf7df8902a5e92e6p1081e2jsnbd77d46d9ddc',
+      'X-RapidAPI-Key': 'ec54d1c6e3msh4efcdc1eb857d38p1c7d44jsn1335bbc620af',
       'X-RapidAPI-Host': 'google-news13.p.rapidapi.com'
     }
   };

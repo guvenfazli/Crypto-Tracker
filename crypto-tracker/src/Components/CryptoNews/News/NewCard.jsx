@@ -1,5 +1,4 @@
 import classes from "./newcard.module.css"
-import { Navigate } from "react-router-dom";
 
 
 export default function NewCard({ newData, page }) {
