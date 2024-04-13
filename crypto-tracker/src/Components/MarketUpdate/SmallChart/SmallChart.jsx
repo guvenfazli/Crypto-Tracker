@@ -1,4 +1,4 @@
-import { ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, AreaChart, Area } from 'recharts';
+import { ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, AreaChart, Area, LineChart } from 'recharts';
 import classes from "./smallchart.module.css"
 /* U T I L S */
 import { fetchCoinData } from '../../../Utils/fetchCoins';
@@ -104,10 +104,10 @@ export default function SmallChart({ data, detail }) {
       </div>
 
       {loading ? <Loading /> :
-        <div className={classes.chartWrapper}>
-          <div className={classes.chartDiv}>
+        <div className={classes.chartWrapper} >
+          <div className={classes.chartDiv} style={{ height: checkButton[1] && 200 }} >
             <ResponsiveContainer width="100%" height="100%" >
-              <AreaChart data={coinData} margin={{ right: 25 }} >
+              <AreaChart data={coinData} margin={{ right: 25, top: 1 }} >
                 <Area fillOpacity={1} fill="url(#colorvalue)" strokeWidth={2.5} type="monotone" activeDot={{ r: 2 }} stroke={data.price_change_24h > 0 ? '#4CAF50' : '#D32F2F'} dot={false} dataKey="value" />
                 <defs>
                   <linearGradient id="colorvalue" x1="0" y1="0" x2="0" y2="1">
@@ -117,7 +117,7 @@ export default function SmallChart({ data, detail }) {
                 </defs>
                 <XAxis tick={true} values='value' style={{ fontSize: "0.7rem" }} angle={-45} />
                 <Tooltip itemStyle={{ color: "black" }} contentStyle={{ backgroundColor: "rgb(255,255,255,0.3)", border: "none", borderRadius: "1rem" }} labelStyle={{ display: 'none' }} />
-                <YAxis style={{ fontSize: "0.7rem", }} angle={-25} domain={["dataMin", "dataMax"]} values='value' />
+                <YAxis style={{ fontSize: "0.7rem" }} angle={-25} domain={["dataMin", "dataMax"]} values='value' />
                 <CartesianGrid stroke='#555773' strokeDasharray="5 5" />
               </AreaChart>
             </ResponsiveContainer>
@@ -125,6 +125,6 @@ export default function SmallChart({ data, detail }) {
         </div>
       }
 
-    </div>
+    </div >
   )
 }

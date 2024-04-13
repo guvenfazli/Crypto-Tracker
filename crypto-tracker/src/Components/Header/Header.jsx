@@ -18,13 +18,6 @@ export default function Header() {
       </nav>
 
       <div className={classes.headerRight}>
-        <select>
-          <option>EN</option>
-          <option>ES</option>
-          <option>DE</option>
-          <option>FR</option>
-          <option>TR</option>
-        </select>
 
         <button>Login</button>
 
