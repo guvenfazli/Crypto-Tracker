@@ -84,6 +84,10 @@
 
 }
 
+.chartDiv {
+  overflow-x: scroll;
+}
+
 @media (max-width: 750px) {
   .coinStats {
     flex-direction: column;
