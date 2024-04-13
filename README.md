@@ -1,5 +1,5 @@
 # Crypto World Website
-## [Live Site](crypto-tracker-guvenfazli.vercel.app](https://crypto-tracker-guvenfazli.vercel.app)
+## [Live Site](https://crypto-tracker-guvenfazli.vercel.app)
 <br>
 App preview
 <br><br>
