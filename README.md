@@ -1,4 +1,4 @@
-# Job Seeker Website
+# Crypto World Website
 ## [Live Site](https://job-seeker-guvenfazli.vercel.app)
 <br>
 App preview
