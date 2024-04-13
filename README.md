@@ -1,5 +1,5 @@
 # Crypto World Website
-## [Live Site](https://job-seeker-guvenfazli.vercel.app)
+## [Live Site](crypto-tracker-guvenfazli.vercel.app)
 <br>
 App preview
 <br><br>
