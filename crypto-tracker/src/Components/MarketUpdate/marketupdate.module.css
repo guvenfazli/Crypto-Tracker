@@ -224,4 +224,5 @@ tbody tr:hover {
 
 .navigators button[disabled] {
   background-color: #8FDACB;
+  box-shadow: 0px 0px 0px #0FAE96;
 }
