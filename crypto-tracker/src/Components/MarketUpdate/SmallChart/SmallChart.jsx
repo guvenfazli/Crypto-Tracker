@@ -1,15 +1,20 @@
-import { ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, AreaChart, Area, LineChart } from 'recharts';
 import classes from "./smallchart.module.css"
+/* L I B R A R Y */
+import { ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, AreaChart, Area, LineChart } from 'recharts';
+
 /* U T I L S */
 import { fetchCoinData } from '../../../Utils/fetchCoins';
+
+/* H O O K S */
 import { useEffect, useState } from 'react';
 
+/* A S S E T S */
 import { backArrow } from './smallcharticon';
 
+/* C O M P O N E N T S */
 import Loading from '../../UI/loading';
 
 export default function SmallChart({ data, detail }) {
-
 
   const [coinData, setCoinData] = useState();
   const [loading, setLoading] = useState(true);
@@ -24,7 +29,7 @@ export default function SmallChart({ data, detail }) {
       setLoading(false)
       const priceHistory = priceData.prices
       setCoinData(() => {
-        let prices = priceHistory.map((price, index) => { if (index % 12 == 0) { return { value: price[1].toFixed(2) } } })
+        let prices = priceHistory.map((price, index) => { if (index % 12 == 0) { return { value: price[1].toFixed(2) } } }) // Rendering data HOURLY.
         let priceList = prices.filter((row) => row !== undefined)
         return priceList
       })
@@ -33,7 +38,7 @@ export default function SmallChart({ data, detail }) {
     coinData();
   }, [])
 
-  async function controlChartDate(dayNumber) {
+  async function controlChartDate(dayNumber) { // Rendering chart based on days.
     setLoading(true)
     const priceData = await fetchCoinData(data.id, dayNumber)
     setLoading(false)
@@ -45,7 +50,7 @@ export default function SmallChart({ data, detail }) {
 
     if (dayNumber === 1) {
       setCoinData(() => {
-        let prices = priceHistory.map((price, index) => { if (index % 12 == 0) { return { value: price[1].toFixed(2) } } })
+        let prices = priceHistory.map((price, index) => { if (index % 12 == 0) { return { value: price[1].toFixed(2) } } }) // Rendering data HOURLY.
         let priceList = prices.filter((row) => row !== undefined)
         return priceList
       })

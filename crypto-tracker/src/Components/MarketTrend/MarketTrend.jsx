@@ -3,7 +3,7 @@ import CoinCard from "./CoinCard/CoinCard"
 
 export default function MarketTrend({ data }) {
 
-  const filteredData = data.slice(0, 4)
+  const filteredData = data.slice(0, 4) // Limiting the data.
 
   return (
     <div className={classes.trend}>

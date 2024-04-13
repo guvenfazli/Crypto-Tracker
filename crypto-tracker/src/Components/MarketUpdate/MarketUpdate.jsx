@@ -10,12 +10,12 @@ export default function MarketUpdate({ data }) {
     start: 0,
     end: 10
   })
-  const searchValue = useRef();
+  const searchValue = useRef(); // Ref for searching coin.
 
   function searchCoins() {
     if (searchValue.current?.value.length > 0) {
       setSearchedCoin(() => {
-        const chosenCoin = data.filter((coin) => coin.name.toLowerCase().includes(searchValue.current?.value.toLowerCase()))
+        const chosenCoin = data.filter((coin) => coin.name.toLowerCase().includes(searchValue.current?.value.toLowerCase())) // Making include case free.
         return chosenCoin;
       })
     } else {
@@ -46,8 +46,6 @@ export default function MarketUpdate({ data }) {
   }
 
   const limitedData = data.slice(controlTable.start, controlTable.end)
-
-
 
   return (
     <>

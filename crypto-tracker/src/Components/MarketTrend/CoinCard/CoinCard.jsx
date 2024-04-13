@@ -1,20 +1,27 @@
+/* L I B R A R Y */
 import { YAxis, AreaChart, Area } from 'recharts';
+
+/* A S S E T S */
 import arrow from '../../../Assets/jumpVector.png'
 import classes from "./coincard.module.css"
-import { useEffect, useState, useContext } from 'react';
+
+/* H O O K S */
+import { useEffect, useState } from 'react';
+
+/* U T I L S */
 import { fetchCoinData } from '../../../Utils/fetchCoins';
 
 
 export default function CoinCard({ data }) {
 
-
   const [coinData, setCoinData] = useState();
+
   useEffect(() => {
     async function coinData() {
       const priceData = await fetchCoinData(data.id, 1)
       const priceHistory = priceData.prices
       setCoinData(() => {
-        let prices = priceHistory.map((price, index) => { if (index % 12 == 0) { return { value: price[1].toFixed(2) } } })
+        let prices = priceHistory.map((price, index) => { if (index % 12 == 0) { return { value: price[1].toFixed(2) } } }) // Getting the data to render it hourly.
         let priceList = prices.filter((row) => row !== undefined)
         return priceList
       })

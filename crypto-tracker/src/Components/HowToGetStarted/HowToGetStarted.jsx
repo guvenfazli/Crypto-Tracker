@@ -1,5 +1,7 @@
 import classes from "./howtogetstarted.module.css"
+/* C O M P O N E N T S */
 import Guide from "./Guide/Guide"
+/* D A T A */
 import { howToGetStarted } from "../../Utils/HowToGetStartedData"
 export default function HowToGetStarted(){
   return (

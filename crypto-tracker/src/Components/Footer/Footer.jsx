@@ -1,5 +1,8 @@
 import classes from "./footer.module.css"
+
+/* A S S E T S */
 import { insta, face, twitter, youtube } from "./FooterIcons"
+
 export default function Footer() {
   return (
     <footer>

@@ -1,8 +1,10 @@
 import classes from "./cryptonews.module.css"
 
+/* C O M P O N E N T S */
 import NewCard from "./News/NewCard"
-import { useState } from "react"
 
+/* H O O K S */
+import { useState } from "react"
 
 export default function CryptoNews({ news }) {
 
@@ -10,7 +12,6 @@ export default function CryptoNews({ news }) {
 
   function controlPage(control) {
     if (control === "+") {
-
       setPage((prev) => {
         if (prev < news.items.length) {
           prev += 1
@@ -25,7 +26,6 @@ export default function CryptoNews({ news }) {
       setPage((prev) => prev -= 1)
     }
   }
-
 
   return (
     <div className={classes.news}>
