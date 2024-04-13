@@ -81,17 +81,17 @@ export default function SmallChart({ data, detail }) {
         <div className={classes.coinStats}>
           <div>
             <p className={classes.title}>{data.name}</p>
-            <p>Current Price: <span style={{ color: "#B6B6B6" }}>{data.current_price.toFixed(2)} $</span></p>
+            <p>Current Price: <span style={{ color: "#B6B6B6" }}>{data.current_price.toLocaleString("EN-US")} $</span></p>
             <p>Price Change as Percentage in 24h: <span style={{ color: data.price_change_percentage_24h < 0 ? '#D32F2F' : '#4CAF50', fontWeight: "bold" }}>{data.price_change_percentage_24h.toFixed(1)} %</span></p>
             <p>Price Change in 24h: <span style={{ color: data.price_change_24h < 0 ? '#D32F2F' : '#4CAF50', fontWeight: "bold" }}>{data.price_change_24h.toFixed(1)} $</span></p>
 
           </div>
 
           <div>
-            <p>All Time High: <span style={{ color: "#B6B6B6" }}>{data.ath} $</span></p>
-            <p>All Time Low: <span style={{ color: "#B6B6B6" }}>{data.atl} $</span></p>
-            <p>Highest in 24h: <span style={{ color: "#B6B6B6" }}>{data.high_24h} $</span></p>
-            <p>Lowest in 24h: <span style={{ color: "#B6B6B6" }}>{data.low_24h} $</span></p>
+            <p>All Time High: <span style={{ color: "#B6B6B6" }}>{data.ath.toLocaleString("EN-US")} $</span></p>
+            <p>All Time Low: <span style={{ color: "#B6B6B6" }}>{data.atl.toLocaleString("EN-US")} $</span></p>
+            <p>Highest in 24h: <span style={{ color: "#B6B6B6" }}>{data.high_24h.toLocaleString("EN-US")} $</span></p>
+            <p>Lowest in 24h: <span style={{ color: "#B6B6B6" }}>{data.low_24h.toLocaleString("EN-US")} $</span></p>
           </div>
 
         </div>

@@ -88,7 +88,7 @@ export default function MarketUpdate({ data }) {
               {searchedCoin ? searchedCoin.map((coin, index) => <tr key={coin.id}>
                 <td data-cell="NO">{index + 1}</td>
                 <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg} style={{ backgroundImage: `url(${coin.image})` }} /> {coin.name}</td>
-                <td data-cell="PRICE">{coin.current_price.toFixed(1)} $</td>
+                <td data-cell="PRICE">{coin.current_price.toFixed(1).toLocaleString("EN-US")} $</td>
                 <td style={{ color: coin.price_change_percentage_24h < 0 ? "#D32F2F" : '#4CAF50' }} data-cell="CHANGE">{coin.price_change_percentage_24h.toFixed(2)} %</td>
                 <td data-cell="TRADE"><button onClick={() => renderDetails(coin)}>See Details</button></td>
               </tr>)
@@ -96,7 +96,7 @@ export default function MarketUpdate({ data }) {
                   <tr key={coin.id}>
                     <td data-cell="NO">{index + 1}</td>
                     <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg} style={{ backgroundImage: `url(${coin.image})` }} /> {coin.name}</td>
-                    <td data-cell="PRICE">{coin.current_price.toFixed(1)} $</td>
+                    <td data-cell="PRICE">{coin.current_price.toLocaleString("EN-US")} $</td>
                     <td style={{ color: coin.price_change_percentage_24h < 0 ? "#D32F2F" : '#4CAF50' }} data-cell="CHANGE">{coin.price_change_percentage_24h.toFixed(2)} %</td>
                     <td data-cell="TRADE"><button onClick={() => renderDetails(coin)}>See Details</button></td>
                   </tr>
