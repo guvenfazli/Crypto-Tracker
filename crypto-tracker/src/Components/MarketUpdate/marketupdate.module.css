@@ -43,6 +43,8 @@
   border-radius: 0.3rem;
 }
 
+
+
 .tableNav input {
   width: 15%;
   padding-left: 1rem;
@@ -192,7 +194,7 @@ td button:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  
+
 }
 
 tbody tr:hover {
@@ -213,9 +215,13 @@ tbody tr:hover {
   background-color: #0FAE96;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.navigators button:Hover {
+  box-shadow: 0px 0px 15px #0FAE96;
 }
 
 .navigators button[disabled] {
   background-color: #8FDACB;
 }
-

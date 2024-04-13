@@ -33,6 +33,11 @@
   background-color: #0FAE96;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.newsNav button:hover{
+  box-shadow: 0px 0px 15px #0FAE96;
 }
 
 .newsNav button[disabled] {
