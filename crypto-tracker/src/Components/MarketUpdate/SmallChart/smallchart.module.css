@@ -84,11 +84,23 @@
 
 }
 
-.chartDiv {
-  overflow-x: scroll;
+.chartWrapper{
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
+.chartDiv {
+  height: 500px;
+}
+
+
+
 @media (max-width: 750px) {
+
+  .chartDiv{
+    width: 1750px;
+  }
+
   .coinStats {
     flex-direction: column;
   }
@@ -127,6 +139,11 @@
 }
 
 @media (max-width: 410px) {
+
+  .chartDiv {
+    height: 300px;
+  }
+  
   .chartController {
     flex-direction: column;
     align-items: center;
