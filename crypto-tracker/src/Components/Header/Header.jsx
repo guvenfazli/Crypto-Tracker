@@ -1,9 +1,6 @@
 import classes from "./header.module.css"
 import { hamb } from "./headerIcons"
 
-const test = 100000
-
-console.log(test.toLocaleString("EN-US"))
 
 export default function Header() {
   return (
