@@ -40,7 +40,7 @@ export default function CoinCard({ data }) {
           <p className={classes.coinName}>{data.name} </p>
         </div>
 
-        <button><img src={arrow} alt="arrow" /></button>
+        <button><img src={arrow} alt="arrowSign" /></button>
       </div>
 
 
