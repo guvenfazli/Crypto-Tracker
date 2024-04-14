@@ -16,7 +16,7 @@ export async function fetchCoinData(coinId, days){
     headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-NrAyxAV2Dq1ebVfGrrNScEua', 'Access-Control-Allow-Origin': '*' }
   };
 
-  const response = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}`, options)
+  const response = await fetch(`http://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}`, options)
   const resData = await response.json();
   return resData;
 }
