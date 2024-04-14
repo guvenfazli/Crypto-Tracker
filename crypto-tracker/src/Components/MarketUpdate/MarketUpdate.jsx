@@ -46,7 +46,6 @@ export default function MarketUpdate({ data }) {
   }
 
   const controlledData = data.map((coin, index) => {return {coin: coin, coinIndex: index}})
-  console.log(controlledData.coin)
   const limitedData = controlledData.slice(controlTable.start, controlTable.end)
   
   return (
