@@ -1,7 +1,7 @@
 export async function fetchCoins() {
   const options = {
     method: 'GET',
-    headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-NrAyxAV2Dq1ebVfGrrNScEua', 'Access-Control-Allow-Origin': 'https://crypto-tracker-guvenfazli.vercel.app' }
+    headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-NrAyxAV2Dq1ebVfGrrNScEua', 'Access-Control-Allow-Origin': '*' }
   };
 
   const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd', options)
@@ -13,7 +13,7 @@ export async function fetchCoins() {
 export async function fetchCoinData(coinId, days){
   const options = {
     method: 'GET',
-    headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-NrAyxAV2Dq1ebVfGrrNScEua', 'Access-Control-Allow-Origin': 'https://crypto-tracker-guvenfazli.vercel.app' }
+    headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-NrAyxAV2Dq1ebVfGrrNScEua', 'Access-Control-Allow-Origin': '*' }
   };
 
   const response = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=${days}`, options)
