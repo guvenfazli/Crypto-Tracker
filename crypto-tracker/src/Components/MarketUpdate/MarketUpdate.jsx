@@ -99,7 +99,7 @@ export default function MarketUpdate({ data }) {
                     <td data-cell="NAME" className={classes.coinInfo}><div className={classes.coinBg} style={{ backgroundImage: `url(${coin.coin.image})` }} /> {coin.coin.name}</td>
                     <td data-cell="PRICE">{coin.coin.current_price.toLocaleString("EN-US")} $</td>
                     <td style={{ color: coin.coin.price_change_percentage_24h < 0 ? "#D32F2F" : '#4CAF50' }} data-cell="CHANGE">{coin.coin.price_change_percentage_24h.toFixed(2)} %</td>
-                    <td data-cell="TRADE"><button onClick={() => renderDetails(coin)}>See Details</button></td>
+                    <td data-cell="TRADE"><button onClick={() => renderDetails(coin.coin)}>See Details</button></td>
                   </tr>
                 )}
             </tbody>
